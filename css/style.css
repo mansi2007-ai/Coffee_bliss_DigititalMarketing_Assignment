@@ -1,0 +1,46 @@
+:root{--bg:#FAFAF7;--ink:#17231F;--green:#0F3D33;--gold:#E8A817;--line:#DCE3DE;--card:#fff;--mute:#5E6B66;--tile:#E7F0EB}
+@media (prefers-color-scheme:dark){:root{--bg:#0E1A16;--ink:#EEF3F0;--green:#CFE6DC;--gold:#F0B93A;--line:#27403A;--card:#15261F;--mute:#9DB0A8;--tile:#1D3329}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 "DM Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque","DM Sans",sans-serif;margin:0;line-height:1.1}
+a{color:inherit}button{font:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+header{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+.bar{max-width:1040px;margin:auto;padding:12px 16px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.logo{font:800 24px "Bricolage Grotesque",sans-serif;color:var(--green);margin-right:auto;text-decoration:none}
+nav{display:flex;gap:4px;flex-wrap:wrap}
+nav a{padding:8px 12px;border-radius:99px;font-weight:500;text-decoration:none}
+nav a.on{background:var(--green);color:var(--bg)}
+.cartlink{background:var(--gold);color:#17231F;font-weight:700;padding:8px 14px;border-radius:99px;text-decoration:none}
+.wrap{max-width:1040px;margin:auto;padding:0 16px 56px}
+.hero{max-width:1040px;margin:auto;padding:48px 16px 28px}
+.hero h1{font-size:clamp(40px,8vw,84px);color:var(--green);font-weight:800;letter-spacing:-.02em;max-width:11ch}
+.hero p{max-width:46ch;color:var(--mute);font-size:18px;margin:16px 0 20px}
+h2{font-size:32px;margin:28px 0 14px;color:var(--green)}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding:12px 0;border-bottom:1px solid var(--line);margin-bottom:20px}
+.tabs button,.cats a{white-space:nowrap;border:1px solid var(--line);background:var(--card);color:var(--ink);padding:9px 16px;border-radius:99px;font-weight:500;text-decoration:none}
+.tabs button.on{background:var(--green);color:var(--bg);border-color:var(--green)}
+.cats{display:flex;gap:8px;flex-wrap:wrap}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+.item,.panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px}
+.item{display:flex;flex-direction:column;gap:6px}
+.panel{margin-bottom:14px}
+.em{width:48px;height:48px;border-radius:12px;background:var(--tile);display:grid;place-items:center;font-size:26px}
+.item h3{font-size:19px}.item p{margin:0;color:var(--mute);font-size:14px;flex:1}
+.row{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:8px}
+.price{font-weight:700}
+.btn,.add{border:0;background:var(--green);color:var(--bg);padding:10px 18px;border-radius:99px;font-weight:700;text-decoration:none;display:inline-block}
+.btn.gold{background:var(--gold);color:#17231F}
+.wa{background:#1FA855;color:#fff}
+input{font:inherit;width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);margin:4px 0 10px}
+label{font-size:14px;color:var(--mute)}.muted{color:var(--mute);font-size:14px}
+.line{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 0;border-bottom:1px solid var(--line)}
+.qty button{width:30px;height:30px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--ink)}
+.qty b{display:inline-block;min-width:26px;text-align:center}
+.steps{display:flex;gap:6px;margin:12px 0 4px}.steps span{flex:1;height:8px;border-radius:9px;background:var(--line)}.steps span.d{background:var(--gold)}
+.cols{display:grid;grid-template-columns:1.4fr 1fr;gap:18px}
+@media(max-width:760px){.cols{grid-template-columns:1fr}}
+.big{font-size:22px}.big a{color:var(--green);font-weight:700}
+#toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--green);color:var(--bg);padding:10px 18px;border-radius:99px;font-weight:700;opacity:0;pointer-events:none;transition:opacity .2s}
+#toast.show{opacity:1}
+footer{border-top:1px solid var(--line);padding:20px 16px;text-align:center;color:var(--mute);font-size:14px}
